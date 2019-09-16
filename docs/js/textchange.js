@@ -35,6 +35,7 @@ function reset(){
     input.value = ""
     deleteTableRow();
     resultKey("");
+    programStep("0");
 }
 function addTableRow(x, y){
     var table = document.getElementById("result-chord-prob")
