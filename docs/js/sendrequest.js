@@ -43,7 +43,7 @@ function chordsplit(x){
     for(var i in arr_x){
         for(var j in key_){
             if (key_[j] == arr_x[i]){
-                if (flag){
+                if (flag && arr_x[i-1] != "/"){
                     result_arr.push(text.join("").trim())
                     text = []
                 }
