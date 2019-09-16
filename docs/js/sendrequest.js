@@ -76,7 +76,6 @@ function send() {
             programStep(75)
             parse_data = parse(result_data)
             for(var i in parse_data){
-                console.log(parse_data[i])
                 addTableRow(parse_data[i]["key"], parse_data[i]["score"]);
             }
             resultKey(parse_data[0]["key"])
