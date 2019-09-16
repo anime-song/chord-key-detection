@@ -33,6 +33,8 @@ function reset(){
     var input = document.getElementById("chords")
 
     input.value = ""
+    deleteTableRow();
+    resultKey("");
 }
 function addTableRow(x, y){
     var table = document.getElementById("result-chord-prob")
