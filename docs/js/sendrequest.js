@@ -30,15 +30,20 @@ function parse(x){
 
     console.log(sort_data)
 
-    return data
+    return sort_data
 };
 
 function send() {
+    deleteTableRow();
+    
+    programStep(0)
     var http_status;
     var result_data;
+    var parse_data;
 
     var form = {};
     form.chords = document.getElementById("chords").value.split(" ")
+    programStep(25)
 
     console.log(form)
 
@@ -48,6 +53,7 @@ function send() {
     xhr.open('POST', API_URL);
     xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
     xhr.send(request_data);
+    programStep(50)
 
     xhr.onreadystatechange = function () {
         var READYSTATE_COMLETED = 4;
@@ -58,6 +64,7 @@ function send() {
             http_status = HTTP_STATUS_OK
 
         } else if (this.readyState == READYSTATE_COMLETED && this.status == HTTP_STATUS_BAD_REQUEST){
+            result_data = this.responseText
             http_status = HTTP_STATUS_BAD_REQUEST
         }
 
@@ -66,7 +73,17 @@ function send() {
     xhr.onloadend = function(){
         console.log(result_data)
         if (http_status == HTTP_STATUS_OK){
-            parse(result_data)
-        } 
+            programStep(75)
+            parse_data = parse(result_data)
+            for(var i in parse_data){
+                console.log(parse_data[i])
+                addTableRow(parse_data[i]["key"], parse_data[i]["score"]);
+            }
+            resultKey(parse_data[0]["key"])
+            programStep(100)
+        }
+        else{
+            programStep(50, 400)
+        }
     }
 };

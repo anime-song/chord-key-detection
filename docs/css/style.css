@@ -1,0 +1,15 @@
+.formpad {
+    position: relative;
+    margin: 30px;
+    font-size: 22px;
+}
+
+#chords {
+    font-size: 100%;
+    height: 40px;
+    width: 100%;
+}
+
+#result-chord-prob {
+    margin-bottom: 20px;
+}
