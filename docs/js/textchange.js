@@ -3,7 +3,6 @@ $(function () {
     var $output = $('#result-header');
     var $card = $('#chord-key-card');
     var $table = $('#result-table');
-
     $input.on('input', function (event) {
         errorMessage("", true)
         if ($input.val() != ""){

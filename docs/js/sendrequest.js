@@ -33,6 +33,31 @@ function parse(x){
     return sort_data
 };
 
+function chordsplit(x){
+    var key_ = ["C", "D", "E", "F", "G", "A", "B"];
+    var arr_x = Array.from(x)
+    var flag = false
+    var text = []
+    var result_arr = []
+
+    for(var i in arr_x){
+        for(var j in key_){
+            if (key_[j] == arr_x[i]){
+                if (flag){
+                    result_arr.push(text.join("").trim())
+                    text = []
+                }
+                flag = true
+                break
+            }
+        }
+        if (flag){
+            text.push(arr_x[i])
+        }
+    }
+    result_arr.push(text.join("").trim())
+    return result_arr
+}
 function send() {
     deleteTableRow();
     
@@ -42,7 +67,7 @@ function send() {
     var parse_data;
 
     var form = {};
-    form.chords = document.getElementById("chords").value.split(" ")
+    form.chords = chordsplit(document.getElementById("chords").value)
     programStep(25)
 
     console.log(form)
