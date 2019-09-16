@@ -84,6 +84,7 @@ function send() {
         }
         else{
             programStep(50, 400)
+            errorMessage(JSON.parse(result_data)["error"]["message"])
         }
     }
 };

@@ -48,6 +48,7 @@
             <div class="formpad" style="text-align: center;">
                 <input type="text" id="chords" class="form-control" placeholder="F G C">
                 <small id="chordsHelpBlock" class="form-text text-muted" style="text-align: left;">※コードを半角スペースで区切って入力します。対応するコードは<a href="#">こちら</a></small>
+                <small id="error-msg" class="form-text text-danger" style="display: none; text-align: left;"></small>
                 <div class="progress" style="height: 30px; margin-bottom: 30px; margin-top: 30px;">
                     <div class="progree-bar progress-bar-striped bg-info" id="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
@@ -69,7 +70,7 @@
                         <th scope="col">スコア</th>
                     </tr>
                 </thead>
-                <tbody id="result-chord-prob" style="font-size: 15px;"></tbody>
+                <tbody id="result-chord-prob" style="font-size: 22px;"></tbody>
             </table>
 
         </div>

@@ -5,6 +5,7 @@ $(function () {
     var $table = $('#result-table');
 
     $input.on('input', function (event) {
+        errorMessage("", true)
         if ($input.val() != ""){
             $card.css('display', '');
             $table.css('display', '');
@@ -53,4 +54,15 @@ function deleteTableRow(){
 function resultKey(x){
     var input = document.getElementById("result-key")
     input.innerHTML = String(x)
+}
+
+function errorMessage(x, reset=false){
+    if (reset == false){
+        var $message = $("#error-msg")
+        $message.css('display', '')
+        $message.text("ERROR: " + x)
+    }else{
+        var $message = $("#error-msg")
+        $message.css('display', 'none')
+    }
 }
