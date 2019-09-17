@@ -1,4 +1,5 @@
 $(function () {
+    var suggest_list = []
     var $input = $('#chords');
     var $output = $('#result-header');
     var $card = $('#chord-key-card');
