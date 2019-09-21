@@ -8,7 +8,9 @@
 
 ## モデルについて
 
-![モデル](https://github.com/anime-song/chord-key-detection/tree/master/img/model.png)
+<div align="center">
+  <img src="https://github.com/anime-song/chord-key-detection/blob/master/img/model.png">
+</div>
 
 全結合層3層にLSTM1層のモデルになっています。
 
