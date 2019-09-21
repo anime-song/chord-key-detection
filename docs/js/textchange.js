@@ -44,6 +44,7 @@ function addTableRow(x, y){
 
     var cell1 = rows.insertCell(0);
     var cell2 = rows.insertCell(1);
+    if (y == 0) y = "0."
 
     cell1.innerHTML = String(x);
     cell2.innerHTML = String(y);
