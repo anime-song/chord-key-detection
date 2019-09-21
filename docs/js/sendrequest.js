@@ -25,7 +25,7 @@ function parse(x){
     sort_keys = sort(data);
     sort_data = []
     for(var i = 0; i < sort_keys.length; i++){
-        sort_data.push({"key": sort_keys[i], "score": Math.floor((data[sort_keys[i]] * 10000.0)) / 100})
+        sort_data.push({"key": sort_keys[i], "score": (data[sort_keys[i]] * 100.0).toFixed(1)})
     }
 
     console.log(sort_data)
