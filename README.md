@@ -1,4 +1,4 @@
-# chord-key-detection
+# chord-key-finder
 
 ## 概要
 コード進行から曲の調（キー）を割り出します。
