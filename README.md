@@ -12,8 +12,6 @@
   <img src="https://github.com/anime-song/chord-key-detection/blob/master/img/model.png">
 </div>
 
-全結合層3層にLSTM1層のモデルになっています。
-
 コードを以下のように変換し、入力に渡しています。
 
     C   →   1 5 8   →   2 0 0 0 1 0 0 1 0 0 0 0
